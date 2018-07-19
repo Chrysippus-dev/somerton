@@ -1,0 +1,105 @@
+-------------------------------------
+Char Gen
+
+You are on your way to Somerton, a village in England in the 1500s. Think about this as you are deciding your character traits. The game is about human interaction as opposed to questing or fighting vast amounts of enemies. The task is to make a character who is fun to roleplay.
+
+____
+Name
+Names in this world should sound reasonably English and suitable for England in the middleages. The names Rosie, John and Abel are good examples, but DragonKnight, xxxLucyxxx or KyloRen69 are not.
+___
+Sex
+Male or Female
+___
+Age
+Sixteen or above
+____________
+Social Class
+------------
+Aristrocracy
+Are you a land owner, a politician or perhaps someone important in the church? Perhaps you are a mayor or a diplomat.
+-----------
+Middleclass
+Architects, bankers, merchants, doctors - educated labour
+-------
+Workers
+Farmers, miners, lumberjacks, smiths, cooks and servants
+_____
+Stats
+STR 50/100
+DEX 50/100
+CON 50/100
+WIS 50/100
+INT 50/100
+CHA 50/100
+
+You have 0 free points
+Stat can't be lower than 20 or higher than 100
+Point buy system +X -X
+BUY STAT STR +10
+ACCEPT RESET
+_____________
+Height/weight
+Default is 5ft
+HEIGHT UP/DOWN
+WEIGHT UP/DOWN
+_____
+Intro
+Set your introduction. This is how someone sees you if they don't know you. It should be a short phrase that begins with 'a' or 'an'. It should be objective and describe you at all times - for example, 'a young lad with brown hair' is a good example, but 'a stunning woman' or 'a smiling man' are poor examples
+
+
+
+Commodities are one object which is grouped
+Maybe you can split into other objects?
+
+Char spec
+	hp_max 	(int) 	#based off con
+	hp	(int) 	#current HP
+	mv_max	(int)
+	mv	(int)	#rest w/ bonus from RP and !hunger
+	warmth	(int)	#too hot / too cold / exposure / sickness?
+	optimum_temp (int) #changed by worn clothes
+	xp	(int)
+	xp_bonus(int)	#low, good, very good, high, exquisite
+	hunger	(int)	#max movement reduced at threshold, die of hunger
+	diseases(arr of objs)
+		disease (obj)
+			effect 	(str)
+			progress(int)
+			curable (bool)
+	injury	(arr)	head,torso,l_arm,r_arm,l_leg,r_leg
+	sex	(bool)
+	class	(str)
+	weight	(int)
+	height	(int)
+	max_carry(int)
+	skills	(arr)
+	inv	(arr)
+	credibility (int)
+
+Room spec
+	short_desc (str)
+	long_desc (str)
+	tags (arr)
+	items (arr)
+	hidden_items (arr)
+
+Object spec
+
+	Keywords (arr)
+	Weight (int)
+	size (very small, small, medium, large, huge) (int)
+	base_value (int)
+	short_desc (str)
+	long_desc (str)
+	dropped_desc (str)
+	quantity (int)
+	decay_date (date)
+	wearslots (arr)
+		head,torso,arm,leg,hand,foot,ear,neck,wrist,finger,face
+	conceals (bool)
+	take (bool)
+	use (fn)
+	item_type (str)
+		shovel,food,liquid
+	breakable (bool)
+	last_touched_by (str) #used to prevent cheating

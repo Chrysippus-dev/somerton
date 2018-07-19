@@ -63,3 +63,23 @@ try:
     from server.conf.secret_settings import *
 except ImportError:
     print "secret_settings.py file not found or failed to import."
+
+######################################################################
+# Game Time setup
+######################################################################
+# Time factor
+TIME_FACTOR = 1
+
+# Game time epoch
+TIME_GAME_EPOCH = 0
+
+# Units
+TIME_UNITS = {
+        "sec": 1,
+        "min": 60,
+        "hour": 60 * 60,
+        "day": 60 * 60 * 12,
+		"week": 60 * 60 * 12 * 5,
+        "month": 60 * 60 * 12 * 5 * 5,
+        "year": 60 * 60 * 12 * 5 * 5 * 12,
+}

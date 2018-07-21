@@ -45,7 +45,7 @@ class Character(DefaultCharacter):
         self.db.INT = 20
         self.db.CHA = 20
 
-    def get_abilities(self):
+    def get_stats(self):
         """
         Simple access method to return ability 
         scores as a tuple (str,agi,mag)

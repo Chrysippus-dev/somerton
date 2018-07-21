@@ -31,6 +31,30 @@ class Command(BaseCommand):
     """
     pass
 
+class CmdStat(Command):
+    """
+    List your character's stats
+    
+    Usage:
+     STAT
+    
+    Displays a list of your current stats.
+    """
+    
+    key = "stat"
+    aliases = ["stats"]
+    lock = "cmd:all()"
+    help_category = "Commands"
+    
+    def func(self):
+        "Sends the user's stats back to them."
+        
+        STR,DEX,CON,WIS,INT,CHA = self.caller.get_stats()
+        name = self.caller.name;
+        string = "Stats for " + name + ":\n" + (" STR: %s\n DEX %s\n CON %s\n WIS %s\n INT %s\n CHA %s" % ( STR,DEX,CON,WIS,INT,CHA ))
+        #string = "STR:" + str(STR)
+        self.caller.msg( string );
+
 # -------------------------------------------------------------
 #
 # The default commands inherit from

@@ -30,4 +30,26 @@ class Character(DefaultCharacter):
     at_post_puppet - Echoes "AccountName has entered the game" to the room.
 
     """
+    def at_object_creation(self):
+        """
+        Called only at initial creation. This is a rather silly
+        example since ability scores should vary from Character to
+        Character and is usually set during some character 
+        generation step instead.
+        """
+        #set persistent attributes
+        self.db.STR = 20
+        self.db.DEX = 20
+        self.db.CON = 20
+        self.db.WIS = 20
+        self.db.INT = 20
+        self.db.CHA = 20
+
+    def get_abilities(self):
+        """
+        Simple access method to return ability 
+        scores as a tuple (str,agi,mag)
+        """
+        return self.db.STR, self.db.DEX, self.db.CON, self.db.WIS, self.db.INT, self.db.CHA
+    
     pass

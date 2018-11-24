@@ -1,3 +1,5 @@
+from evennia import create_script
+
 """
 At_initial_setup module template
 
@@ -16,4 +18,4 @@ does what you expect it to.
 
 
 def at_initial_setup():
-    pass
+    create_script('world.time_events.Time')
